@@ -1,0 +1,190 @@
+html {
+  height: 100vh;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  display: grid;
+  height: auto;
+  width: auto;
+  grid-template-rows: 7rem auto 1.3rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.toolbar {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.page-title {
+  background-color: rgb(186, 219, 40);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  padding-left: 0.8rem;
+}
+
+.page-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+nav {
+  background-color: rgb(74, 100, 23);
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  width: 12rem;
+  background-color: inherit;
+  position: sticky;
+  top: 0px;
+}
+
+.menu-title {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 1rem 0;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: white;
+  padding: 12px 0px 12px 8px;
+  list-style-type: none;
+  border: 1px solid rgb(238, 233, 233);
+}
+
+main {
+  background-color: rgb(224, 241, 241);
+  width: 100%;
+  height: 100%;
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 0.6rem 1rem;
+  margin: 1rem 0;
+}
+
+.item {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 14rem;
+  height: 12rem;
+  border: 1px solid black;
+  border-radius: 3px;
+  box-shadow: 3px 3px 5px 3px black;
+  & img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    margin: 0.3rem;
+  }
+  & .member-name {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    width: 8rem;
+  }
+}
+
+footer {
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .toolbar,
+  .menu-title {
+    display: none;
+  }
+
+  header {
+    height: 3rem;
+  }
+
+  .page-title {
+    padding: 0.5rem 0.3rem;
+  }
+
+  .page-container {
+    flex-direction: column;
+  }
+
+  .menu-container {
+    display: flex;
+    width: 100%;
+    height: 3.5rem;
+    justify-content: space-evenly;
+  }
+
+  nav {
+    position: sticky;
+    top: 0.1px;
+  }
+
+  ul {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  li {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 2.5rem;
+  }
+
+  .list {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .item {
+    flex-direction: row;
+    width: auto;
+    justify-content: start;
+    margin: 0 1rem;
+    box-shadow: none;
+  }
+}
